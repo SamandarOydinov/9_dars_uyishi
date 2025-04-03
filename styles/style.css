@@ -23,6 +23,10 @@ body {
   align-items: center;
 }
 
+.students {
+    max-width: 90%;
+  }
+
 .logo img {
   width: 102px;
   height: 46px;
@@ -178,15 +182,19 @@ body {
 /* courses */
 
 .courses {
-  width: auto;
+  max-width: 1400px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
 }
 
+.courses-img{
+    height: 200px;
+}
+
 .courses-img img {
-  width: 100px;
-  height: 100px;
+    width: 100%;
+   height: 100%; 
   object-fit: contain;
 }
 
@@ -195,13 +203,14 @@ body {
 }
 
 .cardOfCourses {
-  width: 200px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
   border-radius: 20px;
   background-color: white;
+  object-fit: contain;
 }
 
 .cardOfCourses:hover {
@@ -302,6 +311,7 @@ body {
 
 .afzalliklar {
   display: flex;
+  gap: 10px;
 }
 
 .left-afzallik {
@@ -338,12 +348,14 @@ span {
   height: 524px;
 }
 
-@media (max-width: 768px) {
-  .container {
-    padding: 20px;
-  }
+@media (max-width: 1200px){
+    .courses{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
 
-  .navbar {
+@media (max-width: 966px) {
+    .navbar {
     flex-direction: column;
     align-items: center;
     gap: 10px;
@@ -388,17 +400,30 @@ span {
     width: 400px;
   }
 
+  .sertificate-page{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .afzalliklar{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .carousel-sertificate{
+    width: 90%;
+  }
+  .courses {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
   .courses {
     grid-template-columns: 1fr;
   }
 
   .cardOfCourses {
-    width: 200px;
-  }
-}
-
-@media (max-width: 966px) {
-  .courses {
-    grid-template-columns: 1fr 1fr;
+    width: 90%;
   }
 }
